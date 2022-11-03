@@ -4,11 +4,13 @@ from users import views
 from django.views.generic import TemplateView
 
 urlpatterns = [
+    #Posts
     path(
         route='<str:username>/',
         view=TemplateView.as_view(template_name='users/detail.html'),
         name='detail'
     ),
+    #Management
     path(
         route='users/login/', 
         view=views.login_view, 
